@@ -1,48 +1,46 @@
-// gradle-6.7
-// jdk1.8.0_91
+// gradle-8.3
+// jdk-17
 
 apply plugin: 'com.android.library'
 
 buildscript {
   repositories {
+    gradlePluginPortal()
     google()
-    jcenter()
-    mavenLocal()
-    maven {
-      url "https://plugins.gradle.org/m2/"
-    }
+    mavenCentral()
   }
+  
   dependencies {
-    classpath 'com.android.tools.build:gradle:4.1.0'
+    classpath 'com.android.tools.build:gradle:8.1.2'
   }
 }
 
 allprojects {
   repositories {
     google()
-    jcenter()
-    // maven { url 'https://maven.google.com' }
+    mavenCentral()
   }
 }
 
 
 // -- app
 android {
-  compileSdkVersion 26
+  compileSdkVersion 34
   
   defaultConfig {
+    namespace "org.home.file_chooser_lib"
     vectorDrawables.useSupportLibrary = true
     
     versionCode 102
     versionName String.format('%d.%d.%d', (int)(versionCode/10/10), (int)(versionCode/10)%10, versionCode%10)
     
     minSdkVersion 16
-    targetSdkVersion 26
+    targetSdkVersion 33
   }
   
   compileOptions {
-    sourceCompatibility JavaVersion.VERSION_1_8
-    targetCompatibility JavaVersion.VERSION_1_8
+    sourceCompatibility JavaVersion.VERSION_17
+    targetCompatibility JavaVersion.VERSION_17
   }
   
   sourceSets {
