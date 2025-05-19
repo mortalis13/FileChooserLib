@@ -3,10 +3,11 @@ package org.home.file_chooser_lib.fastscroll;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Canvas;
-import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * https://github.com/Mixiaoxiao/FastScroll-Everywhere FastScrollRecyclerView

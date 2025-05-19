@@ -14,7 +14,6 @@ import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.StateListDrawable;
-import android.support.v4.view.ViewCompat;
 import android.text.TextUtils.TruncateAt;
 import android.util.Log;
 import android.util.TypedValue;
@@ -26,6 +25,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.AbsListView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
+
+import androidx.core.view.ViewCompat;
 
 /**
  * 
